@@ -66,6 +66,13 @@ public class Node
         arena.update();     //update the arena in order to see the line
     }
 
+    
+    public void drawArrow(Node nodes, GameArena arena)
+    {
+        Arrow arrow = new Arrow(this.getPosX(), this.getPosY(), nodes.getPosX(), nodes.getPosY(), 3, "White", arena);
+        arena.update();
+    }
+
     /*
     * function for drawing the Node on GameArena 
     *
