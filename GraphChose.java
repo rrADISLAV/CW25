@@ -18,7 +18,10 @@ public class GraphChose
             Graph3 second = new Graph3();
             second.Graph3();
             break;
-            
+            case 4: //Graph3 presentation
+            Graph4 fourth = new Graph4();
+            fourth.Graph4();
+            break;
         }
     }
 }
