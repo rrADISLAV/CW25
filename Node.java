@@ -1,3 +1,4 @@
+import java.util.*;
 public class Node
 {
     int posX;           //position X of Node
@@ -16,12 +17,17 @@ public class Node
 
     public int getPosY() //get Y function
     {
-        return posX;
+        return posY;
     }
 
     public String getColor() //get color function
     {
         return color;
+    }
+
+    public int getNumber() //get number of node
+    {
+        return number;
     }
 
     public void setPosX(int posXParameter) //change posX function
@@ -53,9 +59,9 @@ public class Node
     * and eding point of the node that calls the
     * function and the node that is as a parameter
     */
-    public void drawLine(Node nodePrameter, GameArena arena)
+    public void drawLine(Node nodes, GameArena arena)
     {
-        Line line = new Line(this.getPosX(), this.getPosY(), nodeParameter.getPosX(), nodeParameter.getPosY(), 10, "Red");
+        Line line = new Line(this.getPosX(), this.getPosY(), nodes.getPosX(), nodes.getPosY(), 5, "Red");
         arena.addLine(line); //draw the line function
         arena.update();     //update the arena in order to see the line
     }
@@ -64,10 +70,10 @@ public class Node
     * function for drawing the Node on GameArena 
     *
     */
-    public void drawNode(GameArena arenaParameter) 
+    public void drawNode(GameArena arena) 
     {
         Ball node = new Ball(posX, posY, diameter, color); //creating a node
-        Text initialText = new Text(Integer.toString(counter), positionX-(diameter/4), positionY+(diameter/4),diameter,"Black");
+        Text initialText = new Text(Integer.toString(number), posX-(diameter/10), posY+(diameter/10),diameter,"Red");
         arena.addBall(node);        //drawing the node
         arena.addText(initialText); //drawing the test on the node
         arena.update();             //update arena in order to add the node
