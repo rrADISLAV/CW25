@@ -34,17 +34,14 @@ public class Graph3
             if(i==0)
             {            
                 nodes[i].pairPairs(nodes[i+1].getNumber());
-                nodes[i].pairPairs(nodes[3].getNumber());
             }
             else if(i==3)
             {
-                nodes[i].pairPairs(nodes[i-1].getNumber());
-                nodes[i].pairPairs(nodes[i].getNumber());
+                nodes[i].pairPairs(nodes[i-3].getNumber());
             }
             else
             {
                 nodes[i].pairPairs(nodes[i+1].getNumber());
-                nodes[i].pairPairs(nodes[i-1].getNumber());
             }
 
             //populating the pairs2 LinkedList
