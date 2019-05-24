@@ -27,6 +27,7 @@ public class Graph4
             }
             else 
             {
+                nodes[i].drawArrow(nodes[i], arena);
                 nodes[i+1].drawArrow(nodes[i], arena);
             }
             /*else
@@ -38,22 +39,23 @@ public class Graph4
             //storing pair numbers in order to print them after that
             if(i==0)
             {            
-                nodes[i].pairPairs(nodes[i+1].getNumber());
-                nodes[i].pairPairs(nodes[3].getNumber());
+                nodes[i].pairPairs(nodes[i+3].getNumber());
             }
             else if(i==3)
             {
                 nodes[i].pairPairs(nodes[i-1].getNumber());
-                nodes[i].pairPairs(nodes[i].getNumber());
+               // nodes[i].pairPairs(nodes[i].getNumber());
+                nodes[i].pairPairs(nodes[i-3].getNumber());
             }
             else
             {
-                nodes[i].pairPairs(nodes[i+1].getNumber());
                 nodes[i].pairPairs(nodes[i-1].getNumber());
+               // nodes[i].pairPairs(nodes[i-1].getNumber());
             }
 
             //populating the pairs2 LinkedList
             pairs2.add(nodes[i].getNumber()); 
+            
         }
 
         /*
