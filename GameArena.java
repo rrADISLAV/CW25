@@ -113,7 +113,7 @@ public class GameArena
         if (createWindow)
         {
             window = new JFrame();
-            window.setTitle("Let's Play!");
+            window.setTitle("Data Structures");
             window.setContentPane(jfxPanel);
             window.setResizable(false);
             window.pack();

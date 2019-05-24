@@ -4,7 +4,7 @@ public class Graph4
     public void Graph4()
     {
         GameArena arena = new GameArena(700, 700); //creating GameArena
-        Node[] nodes = new Node[4]; //array of nodes
+        Node[] nodes = new Node[8]; //array of nodes
         List<Integer> pairs2 = new LinkedList<>();
 
         // node Number  = posX, posY, color, Diam, Number;
@@ -12,8 +12,12 @@ public class Graph4
         nodes[1] = new Node(100, 200, "AQUA", 15, 2);
         nodes[2] = new Node(200, 400, "AQUA", 15, 3);
         nodes[3] = new Node(300, 200, "AQUA", 15, 4);
-
-
+       
+        //used for self-arcs
+        nodes[4] = new Node(50, 250, "BLACK", 1, 5);
+        nodes[5] = new Node(50, 140, "BLACK", 1, 6);
+        nodes[6] = new Node(350, 250, "BLACK", 1, 7);
+        nodes[7] = new Node(350, 140, "BLACK", 1, 8);
         /*
         *drawing the lines
         */
@@ -23,18 +27,20 @@ public class Graph4
             if(i==3)
             {
                 nodes[3].drawArrow(nodes[0], arena);
-                nodes[0].drawArrow(nodes[3], arena); //drow a two - way arrow
+                nodes[0].drawArrow(nodes[3], arena); //drow a two - way arrow 
             }
+            //draw self-arcs 
             else 
             {
                 nodes[i].drawArrow(nodes[i], arena);
                 nodes[i+1].drawArrow(nodes[i], arena);
+                nodes[1].drawLine(nodes[4], arena);
+                nodes[4].drawLine(nodes[5], arena);
+                nodes[5].drawArrow(nodes[1], arena);
+                nodes[3].drawLine(nodes[6], arena);
+                nodes[6].drawLine(nodes[7], arena);
+                nodes[7].drawArrow(nodes[3], arena);
             }
-            /*else
-            {
-
-                nodes[i].drawArrow(nodes[i+1], arena);
-            }*/
 
             //storing pair numbers in order to print them after that
             if(i==0)

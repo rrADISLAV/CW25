@@ -61,7 +61,7 @@ public class Node
     */
     public void drawLine(Node nodes, GameArena arena)
     {
-        Line line = new Line(this.getPosX(), this.getPosY(), nodes.getPosX(), nodes.getPosY(), 5, "Red");
+        Line line = new Line(this.getPosX(), this.getPosY(), nodes.getPosX(), nodes.getPosY(), 3, "White");
         arena.addLine(line); //draw the line function
         arena.update();     //update the arena in order to see the line
     }
