@@ -39,7 +39,7 @@ public class Graph1
             else if(i==3)
             {
                 nodes[i].pairPairs(nodes[i-1].getNumber());
-                nodes[i].pairPairs(nodes[i].getNumber());
+                nodes[i].pairPairs(nodes[i-3].getNumber());
             }
             else
             {
