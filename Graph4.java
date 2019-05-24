@@ -18,6 +18,8 @@ public class Graph4
         nodes[5] = new Node(50, 140, "BLACK", 1, 6);
         nodes[6] = new Node(350, 250, "BLACK", 1, 7);
         nodes[7] = new Node(350, 140, "BLACK", 1, 8);
+        
+        
         /*
         *drawing the lines
         */
@@ -62,20 +64,24 @@ public class Graph4
             
         }
 
-        /*
-        *drawing the nodes
-        */
-        for(int i = 0; i<4; i++)
-        {
-            nodes[i].drawNode(arena); 
-        }
+        
 
         /*
         * Printing the connections of the nodes
         */
-        for(int j = 0; j<4; j++)
+        int y = 0;
+        while(y < 4)
         {
-            System.out.println("Node #"+nodes[j].getNumber()+" has pairs " + nodes[j].pairs);//printing the connected nodes to this one
+            System.out.println("Node #"+nodes[y].getNumber()+" has pairs " + nodes[y].pairs);
+            y++;
+        }
+        
+        /*
+        *drawing nodes
+        */
+        for(int i = 0; i<4; i++)
+        {
+            nodes[i].drawNode(arena); 
         }
     }
 }

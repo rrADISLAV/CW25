@@ -52,19 +52,21 @@ public class Graph1
         }
 
         /*
-        *drawing the nodes
+        * Printing the connections of the nodes
+        */
+        int y = 0;
+        while(y < 4)
+        {
+            System.out.println("Node #"+nodes[y].getNumber()+" has pairs " + nodes[y].pairs);
+            y++;
+        }
+
+        /*
+        *drawing nodes
         */
         for(int i = 0; i<4; i++)
         {
             nodes[i].drawNode(arena); 
-        }
-
-        /*
-        * Printing the connections of the nodes
-        */
-        for(int j = 0; j<4; j++)
-        {
-            System.out.println("Node #"+nodes[j].getNumber()+" has pairs " + nodes[j].pairs);//printing the connected nodes to this one
         }
     }
 }

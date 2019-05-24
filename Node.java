@@ -10,19 +10,14 @@ public class Node
 
     List<Integer> pairs = new LinkedList<>(); //stores the number(index) of the nodes and is used to print the pairs of each node
 
-    public int getPosX() //get X function
-    {
-        return posX;
-    }
-
-    public int getPosY() //get Y function
+     public int getPosY() //get Y function
     {
         return posY;
     }
 
-    public String getColor() //get color function
+    public int getPosX() //get X function
     {
-        return color;
+        return posX;
     }
 
     public int getNumber() //get number of node
@@ -30,22 +25,28 @@ public class Node
         return number;
     }
 
-    public void setPosX(int posXParameter) //change posX function
+    public String getColor() //get color function
     {
-        this.posX = posXParameter;
+        return color;
     }
-    
+
     public void setPosY(int posYParameter) //change posY function
     {
         this.posY = posYParameter;
     }
 
+    public void setPosX(int posXParameter) //change posX function
+    {
+        this.posX = posXParameter;
+    }
+    
     public void changeColor(String colorParameter) //change color funciton
     {
         this.color = colorParameter;
     }
 
-    public Node(int posXParameter, int posYParameter, String colorParameter, int diameterParameter, int numberParameter) //constructor
+    //constructor
+    public Node(int posXParameter, int posYParameter, String colorParameter, int diameterParameter, int numberParameter) 
     {
         posX = posXParameter;
         posY = posYParameter;
@@ -66,7 +67,9 @@ public class Node
         arena.update();     //update the arena in order to see the line
     }
 
-    
+    /*
+    * function that draws an arrow
+    */
     public void drawArrow(Node nodes, GameArena arena)
     {
         Arrow arrow = new Arrow(this.getPosX(), this.getPosY(), nodes.getPosX(), nodes.getPosY(), 3, "White", arena);

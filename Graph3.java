@@ -49,19 +49,20 @@ public class Graph3
         }
 
         /*
-        *drawing the nodes
-        */
-        for(int i = 0; i<4; i++)
+        * Printing the connections of the nodes
+        */ int y=0;
+        while(y < 4)
         {
-            nodes[i].drawNode(arena); 
+            System.out.println("Node #"+nodes[y].getNumber()+" has pairs " + nodes[y].pairs);
+            y++;
         }
 
         /*
-        * Printing the connections of the nodes
+        *drawing nodes
         */
-        for(int j = 0; j<4; j++)
+        for(int p = 0; p<4; p++)
         {
-            System.out.println("Node #"+nodes[j].getNumber()+" has pairs " + nodes[j].pairs);//printing the connected nodes to this one
+            nodes[p].drawNode(arena); 
         }
     }
 }
