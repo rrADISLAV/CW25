@@ -56,8 +56,8 @@ public class Node
     public void drawLine(Node nodePrameter, GameArena arena)
     {
         Line line = new Line(this.getPosX(), this.getPosY(), nodeParameter.getPosX(), nodeParameter.getPosY(), 10, "Red");
-        arena.addLine(line);
-        arena.update();
+        arena.addLine(line); //draw the line function
+        arena.update();     //update the arena in order to see the line
     }
 
     /*
@@ -79,6 +79,6 @@ public class Node
     */
     public void pairPairs(int pairParameter)
     {
-        pairs.add(pairParameter);
+        pairs.add(pairParameter); //LinkedList function for adding an element
     }
 }
