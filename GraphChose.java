@@ -26,6 +26,10 @@ public class GraphChose
             Graph4 fourth = new Graph4();
             fourth.Graph4();
             break;
+            case 5: //Graph4 presentation
+            Graph5 fifth = new Graph5();
+            fifth.Graph5();
+            break;
         }
     }
 }
